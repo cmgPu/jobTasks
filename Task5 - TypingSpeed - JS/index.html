@@ -93,15 +93,16 @@
             diff = now - start;
             //because difference is in milisecond dividing it with 1000 will give result in seconds
             seconds = Math.floor(diff / 1000)
+           var minute=(seconds/60).toFixed(2)
             //calculate writing speed and pass it to function to write them out
-            writeResults((words / seconds).toFixed(3), (chars / seconds).toFixed(3))
+            writeResults((words / minute).toFixed(0), (chars / minute).toFixed(0))
 
         }
         function writeResults(resultWords, resultChars) {
             //save results after clear interval and focus out
             if (resultChars != 0 && resultWords != 0) {
                 //write calculated results into given element
-                document.getElementById("speed").innerHTML = "<p>" + resultWords + " words /sec. and " + resultChars + " chars/sec.</p>"
+                document.getElementById("speed").innerHTML = "<p>" + resultWords + " words /min. and " + resultChars + " chars/min.</p>"
             }
         }
     </script>
