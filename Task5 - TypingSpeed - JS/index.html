@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 
@@ -20,11 +24,12 @@
     <form id="fake-form" class="col-md-6">
         <div class="form-group">
             <label>Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
         </div>
         <div class="form-group">
             <label for="comment">Comment:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <textarea class="form-control" rows="5" onkeydown="setStart()" id="comment"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -36,10 +41,69 @@
         /*
             Prevent the form from submitting
         */
-        document.getElementById('fake-form').addEventListener('submit', function(e){
+        document.getElementById('fake-form').addEventListener('submit', function (e) {
             e.preventDefault();
             console.log('Yes you clicked');
         })
+
+        var start = 0
+        var words = 0
+        var chars = 0
+        var now = 0
+        var diff = 0
+        var seconds = 0
+        var loop
+        //function will be executed when user press one of the keys while focus is on comment field
+        //this event will be considered as start of typing and event listener will be removed until focus out
+
+        function setStart() {
+            //clear textarea in case there are left of from previous input
+            document.getElementById('comment').value = '';
+            //remove onkeydown so it can not call for start on every keydown event
+            document.getElementById('comment').removeAttribute("onkeydown")
+            //add focus out event so interval could be stopped ,this event is considered as end of typing
+            document.getElementById('comment').setAttribute("onfocusout", "setStop()")
+            //function calculateTyping speed will be executed every second to calculate and show user results
+            start = new Date().getTime();
+            //creating interval and its reference
+            loop = setInterval(calculateTypingSpeed, 1000);
+
+
+        }
+        //function will be executed on focusout event 
+        function setStop() {
+            //stop interval by passing its reference
+            clearInterval(loop)
+            //focusout attributed will be removed
+            document.getElementById('comment').removeAttribute("onfocusout")
+            //and full reset will be completed by returnig onkeydown event which starts new speed tracking
+            document.getElementById('comment').setAttribute("onkeydown", "setStart()")
+
+
+
+        }
+        function calculateTypingSpeed() {
+            //text content of comment field will be trimed(whitespaces on start and end will be removed) and splited by whitespace(s) between word to determine number of words
+            words = document.getElementById("comment").value.trim().split(/\s+/).length - 1;
+            //all whitespaces in text content will be removed to detremine number of chars 
+            chars = document.getElementById("comment").value.replace(/ /g, '').length;
+            //get current time
+            now = new Date().getTime();
+            //find difference between start and current measure interval
+            diff = now - start;
+            //because difference is in milisecond dividing it with 1000 will give result in seconds
+            seconds = Math.floor(diff / 1000)
+            //calculate writing speed and pass it to function to write them out
+            writeResults((words / seconds).toFixed(3), (chars / seconds).toFixed(3))
+
+        }
+        function writeResults(resultWords, resultChars) {
+            //save results after clear interval and focus out
+            if (resultChars != 0 && resultWords != 0) {
+                //write calculated results into given element
+                document.getElementById("speed").innerHTML = "<p>" + resultWords + " words /sec. and " + resultChars + " chars/sec.</p>"
+            }
+        }
     </script>
 </body>
 
