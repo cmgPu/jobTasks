@@ -1,0 +1,54 @@
+.box-wrapper{
+  width:600px;
+  height: 600px;
+}
+.box{
+
+  background-color: green;
+}
+.horizontal-slider-box{
+  position: absolute;
+  left:0px;
+  top:520px;
+  width:510px;
+  background-color: silver;
+  border-radius: 4px;
+  height: 25px;
+}
+.horizontal-slider{
+  position: absolute;
+ 
+  width:25px;
+  border-radius: 50%;
+  background-color: grey;
+  height: 25px;
+}
+.vertical-slider{
+  position: absolute;
+  width:25px;
+  border-radius: 50%;
+  background-color: grey;
+  height: 25px;
+  
+}
+.vertical-slider-box{
+  position: absolute;
+  top: 0px;
+  left:520px;
+  width:25px;
+  background-color: silver;
+  border-radius: 4px;
+  height: 510px;
+}
+.horizontal-input{
+  width:50px;
+  position: absolute;
+  left:245px;
+  top:550px;
+}
+.vertical-input{
+  width:50px;
+  position: absolute;
+  left:550px;
+  top:260px;
+}

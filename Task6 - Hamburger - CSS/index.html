@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hamburger</title>
+    <style>
+        .icon {
+            position: absolute;
+            display: block;
+            width: 100px;
+            height: 100px;
+
+
+        }
+
+        .plate {
+            position: absolute;
+            background-color: black;
+            width: 80%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            height: 8%;
+            left: 10%;
+            bottom: 2%;
+        }
+
+        .glass {
+            width: 30%;
+            height: 60%;
+            position: absolute;
+            left: 12%;
+            bottom: 12%;
+            overflow: hidden;
+        }
+
+        .glass-down {
+            width: 0px;
+            height: 0px;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 100px solid black;
+            position: absolute;
+            bottom: -100%;
+
+        }
+
+        .glass-upper-with-rec {
+            width: 16%;
+            height: 7%;
+            border-left: 7px solid black;
+            border-right: 7px solid black;
+            position: absolute;
+            left: 12%;
+            top: 41.5%;
+            background-color: transparent
+        }
+
+        .glass-upper-end {
+            width: 30%;
+            height: 3%;
+            position: absolute;
+            left: 12%;
+            top: 40%;
+            background-color: black;
+        }
+
+        .drinking-straw {
+            width: 15%;
+            height: 56%;
+            position: absolute;
+            top: 20%;
+            left: 25%;
+            border-left: 4px solid black;
+            border-top: 4px solid black;
+            transform: rotate(20deg);
+            border-top-left-radius: 3px;
+        }
+
+        .hamburger {
+            width: 40%;
+            height: 30%;
+            position: absolute;
+            right: 12%;
+            bottom: 12%;
+        }
+
+        .hamburger-top {
+            height: 30%;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            border-top-left-radius: 90px;
+            border-top-right-radius: 90px;
+            background-color: black;
+        }
+
+        .hamburger-bottom {
+            height: 30%;
+            width: 100%;
+            position: absolute;
+            bottom: 0%;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            background-color: black;
+        }
+
+        .hamburger-middle {
+            width: 95%;
+            height: 25%;
+            position: absolute;
+            top: 37.5%;
+            left: 2.5%;
+        }
+
+        .hamburger-content {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            position: absolute;
+
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- icon box -->
+    <div class="icon">
+        <!-- Glass part with sloped borders .Note:CSS code for triangle was taken from internet but modified to point upside down-->
+        <div class="glass">
+
+            <div class="glass-down"></div>
+
+        </div>
+        <!-- Glass part with transparent rectangle -->
+        <div class="glass-upper-with-rec"></div>
+        <!-- Top part of glass -->
+        <div class="glass-upper-end"></div>
+        <!-- Rotated drinking straw -->
+        <div class="drinking-straw"></div>
+        <!-- Hamburger wrapper -->
+        <div class="hamburger">
+            <!-- Top slice of hamburger -->
+            <div class="hamburger-top"></div>
+            <!-- Hamburger content -->
+            <div class="hamburger-middle">
+                <div class="hamburger-content"></div>
+
+            </div>
+            <!-- Bottom slice of hamburger -->
+            <div class="hamburger-bottom"></div>
+        </div>
+        <!-- Plate for drink and hamburger -->
+        <div class="plate">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
