@@ -53,8 +53,10 @@
         var diff = 0
         var seconds = 0
         var loop
+
+
         //function will be executed when user press one of the keys while focus is on comment field
-        //this event will be considered as start of typing and event listener will be removed until focus out
+        //this event will be considered as start of typing and event listener will be removed when focus is out
 
         function setStart() {
             //clear textarea in case there are left of from previous input
@@ -65,22 +67,18 @@
             document.getElementById('comment').setAttribute("onfocusout", "setStop()")
             //function calculateTyping speed will be executed every second to calculate and show user results
             start = new Date().getTime();
-            //creating interval and its reference
+            //creating interval and its reference,
             loop = setInterval(calculateTypingSpeed, 1000);
-
-
         }
         //function will be executed on focusout event 
         function setStop() {
+
             //stop interval by passing its reference
             clearInterval(loop)
             //focusout attributed will be removed
             document.getElementById('comment').removeAttribute("onfocusout")
             //and full reset will be completed by returnig onkeydown event which starts new speed tracking
             document.getElementById('comment').setAttribute("onkeydown", "setStart()")
-
-
-
         }
         function calculateTypingSpeed() {
             //text content of comment field will be trimed(whitespaces on start and end will be removed) and splited by whitespace(s) between word to determine number of words
@@ -93,16 +91,15 @@
             diff = now - start;
             //because difference is in milisecond dividing it with 1000 will give result in seconds
             seconds = Math.floor(diff / 1000)
-           var minute=(seconds/60).toFixed(2)
+            var minute = (seconds / 60).toFixed(2)
             //calculate writing speed and pass it to function to write them out
-            writeResults((words / minute).toFixed(0), (chars / minute).toFixed(0))
-
+            writeResults((words / minute).toFixed(1), (chars / minute).toFixed(1))
         }
         function writeResults(resultWords, resultChars) {
             //save results after clear interval and focus out
             if (resultChars != 0 && resultWords != 0) {
                 //write calculated results into given element
-                document.getElementById("speed").innerHTML = "<p>" + resultWords + " words /min. and " + resultChars + " chars/min.</p>"
+                document.getElementById("speed").innerHTML = "<p>Average scores :" + resultWords + " words/min. and " + resultChars + " chars/min.</p>"
             }
         }
     </script>

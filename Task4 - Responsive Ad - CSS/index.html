@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive ad</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+        }
+        @media only screen and (min-width: 600px) {
+        .ad {
+            width: 120px;
+            height: 600px;
+            margin: 0px;
+            background-color: #18588E;
+            padding: 0px;
+            text-align: center;
+            transition: height 1s;
+        }
+
+        .caption {
+            
+            width: 100%;
+            height: 15%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            justify-items: legacy;
+            color: white;
+            font-size: 1.2em;
+            transition:font-size 1s;
+        }
+
+        .logo-container-wrapper {
+            display: block;
+            width: 100%;
+            height: 65%;
+            
+            
+            float: left;
+            margin-left: 27.5px;
+           
+           
+        }
+
+        .logo-container {
+            width: 65px;
+            height: 16.66%;
+            margin: 0px;
+            float: left;
+        }
+
+        .logo-node {
+            width: 65px;
+            height: 100%;
+            background-color: white;
+        }
+
+        .logo-mongo {
+            width: 65px;
+            height: 100%;
+            background-color: green;
+        }
+
+        .logo-react {
+            width: 65px;
+            height: 100%;
+            background-color: black;
+        }
+
+        .logo-html {
+            width: 65px;
+            height: 100%;
+            background-color: #00b300;
+        }
+
+        .logo-css {
+            width: 65px;
+            height: 100%;
+            background-color: purple;
+        }
+
+        .logo-js {
+            width: 65px;
+            height: 100%;
+
+        }
+
+        .company-logo {
+            max-height: 25%;
+            width: auto;
+            float: right;
+        }
+
+        .message {
+            width: 100%;
+            height: 20%;
+            float: left;
+            color: white;
+            margin-top: 5px;
+            text-align: center;
+            font-size:1.5em;
+            
+        }
+        }
+        @media only screen and (min-width: 900px) {
+        .ad {
+            width: 240px;
+            height: 400px;
+            margin: 0px;
+            background-color: #18588E;
+            padding: 0px;
+            text-align: center;
+            transition: height 1s;
+        }
+
+        .caption {
+            width: 100%;
+            height: 15%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            justify-items: legacy;
+            color: white;
+            font-size: 2em;
+            transition:font-size 1s;
+        }
+
+        .logo-container-wrapper {
+            display: block;
+            width: 100%;
+            height: 65%;
+            
+            
+            float: left;
+            margin-left: 33.33px;
+           
+           
+        }
+
+        .logo-container {
+            width: 86.66px;
+            height: 33.33%;
+            margin: 0px;
+            float: left;
+        }
+
+        .logo-node {
+            width: 86.66px;
+            height: 100%;
+            background-color: white;
+        }
+
+        .logo-mongo {
+            width: 86.66px;
+            height: 100%;
+            background-color: green;
+        }
+
+        .logo-react {
+            width: 86.66px;
+            height: 100%;
+            background-color: black;
+        }
+
+        .logo-html {
+            width: 86.66px;
+            height: 100%;
+            background-color: #00b300;
+        }
+
+        .logo-css {
+            width: 86.66px;
+            height: 100%;
+            background-color: purple;
+        }
+
+        .logo-js {
+            width: 86.66px;
+            height: 100%;
+
+        }
+
+        .company-logo {
+            max-height: 25%;
+            width: auto;
+            float: right;
+        }
+
+        .message {
+            width: 100%;
+            height: 20%;
+            float: left;
+            color: white;
+            margin-top: 5px;
+            text-align: center;
+            font-size:1.3em;
+            
+        }
+        }
+        @media only screen and (min-width: 1000px) {
+        .ad {
+            width: 300px;
+            height: 600px;
+            margin: 0px;
+            background-color: #18588E;
+            padding: 0px;
+            text-align: center;
+            transition: height 1s;
+        }
+
+        .caption {
+            width: 100%;
+            height: 15%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            justify-items: legacy;
+            color: white;
+            font-size: 3em;
+            transition:font-size 1s;
+        }
+
+        .logo-container-wrapper {
+            display: block;
+            width: 100%;
+            height: 65%;
+            
+            
+            float: left;
+            margin-left: 20px;
+           
+           
+        }
+
+        .logo-container {
+            width: 130px;
+            height: 33.33%;
+            margin: 0px;
+            float: left;
+        }
+
+        .logo-node {
+            width: 130px;
+            height: 100%;
+            background-color: white;
+        }
+
+        .logo-mongo {
+            width: 130px;
+            height: 100%;
+            background-color: green;
+        }
+
+        .logo-react {
+            width: 130px;
+            height: 100%;
+            background-color: black;
+        }
+
+        .logo-html {
+            width: 130px;
+            height: 100%;
+            background-color: #00b300;
+        }
+
+        .logo-css {
+            width: 130px;
+            height: 100%;
+            background-color: purple;
+        }
+
+        .logo-js {
+            width: 130px;
+            height: 100%;
+
+        }
+
+        .company-logo {
+            max-height: 25%;
+            width: auto;
+            float: right;
+        }
+
+        .message {
+            width: 100%;
+            height: 20%;
+            float: left;
+            color: white;
+            margin-top: 5px;
+            text-align: center;
+            font-size:1.5em;
+            
+        }
+        }
+        @media only screen and (min-width: 1300px) {
+        .ad {
+            width: 468px;
+            height: 60px;
+            margin: 0px;
+            background-color: #18588E;
+            padding: 0px;
+            transition: height 1s;
+        }
+
+        .caption {
+            width: 20%;
+            height: 66.66%;
+            background-color: red;
+            float: left;
+            color: white;
+            font-size: 16px;
+            padding-top:20px;
+            transition:font-size 1s;
+        }
+
+        .logo-container-wrapper {
+            width: 50%;
+            height: 65%;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+            margin-top: 10.5px;
+        }
+
+        .logo-container {
+            width: 16.66%;
+            height: 100%;
+            margin: 0px;
+
+            float: left;
+        }
+
+        .logo-node {
+            max-width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .logo-mongo {
+            max-width: 100%;
+            height: 100%;
+            background-color: green;
+        }
+
+        .logo-react {
+            max-width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .logo-html {
+            max-width: 100%;
+            height: 100%;
+            background-color: #00b300;
+        }
+
+        .logo-css {
+            width: 100%;
+            height: 100%;
+            background-color: purple;
+        }
+
+        .logo-js {
+            max-width: 100%;
+            height: 100%;
+
+        }
+
+        .company-logo {
+            max-height: 25%;
+            width: auto;
+            float: right;
+        }
+
+        .message {
+            width: 29%;
+            height: 100%;
+            float: left;
+            color: white;
+            margin-top: 5px;
+            text-align: center;
+             font-size: 15px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <!--ad body-->
+    <div class="ad">
+        <!--ad caption-->
+        <div class="caption"><br><b>FAMILIAR?</b></div>
+        <!--logos container wrapper-->
+        <div class="logo-container-wrapper">
+            <!--each logo is placed in its own conatiner-->
+            <div class="logo-container">
+                <img class="logo-html" src="img/html.svg">
+            </div>
+            <div class="logo-container">
+                <img class="logo-css" src="img/CSS3.svg">
+            </div>
+            <div class="logo-container">
+                <img class="logo-js" src="img/JS.svg">
+
+            </div>
+            <div class="logo-container">
+                <img class="logo-mongo" src="img/mongodb.svg">
+            </div>
+            <div class="logo-container">
+                <img class="logo-node" src="img/node.svg">
+            </div>
+            <div class="logo-container">
+                <img class="logo-react" src="img/react.svg">
+            </div>
+        </div>
+        <!--footer message-->
+        <div class="message">
+            <b> JOIN OUR <br> TEAM<br></b>
+            <img class="company-logo" src="img/cmg.svg">
+        </div>
+    </div>
+</body>
+
+</html>
