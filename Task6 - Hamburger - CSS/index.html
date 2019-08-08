@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hamburger</title>
+    <style>
+      .plate {
+        position: absolute;
+        top: 400px;
+        left: 500px;
+        background: black;
+        width: 200px;
+        height: 15px;
+        border-bottom-left-radius: 40%;
+        border-bottom-right-radius: 40%;
+      }
+      /*
+      Had to google how to make trapezoid in css for glass. 
+      Still didnt use any tools, but this would be super easy to make polygons with: 
+      https://bennettfeely.com/clippy/ 
+      but i think that counts as using some kind of tool, so I DIDN'T use clip-path and poligons
+      but instead I made a trapezoid using borders 
+      */
+      .glass {
+        position: absolute;
+        top: 305px;
+        left: 520px;
+        border-top: 90px solid black;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        width: 50px;
+        height: 0px;
+      }
+
+      .glass-empty {
+        position: absolute;
+        top: 285px;
+        left: 519px;
+        border-top: 90px dashed skyblue;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        width: 52px;
+        height: 0px;
+      }
+
+      .straw-vertical {
+        position: absolute;
+        transform: skew(-15deg);
+        background: black;
+        top: 250px;
+        left: 560px;
+        width: 10px;
+        height: 60px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .straw-horizontal {
+        position: absolute;
+        background: black;
+        top: 250px;
+        left: 570px;
+        width: 60px;
+        height: 10px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .hamburger-bottom {
+        position: absolute;
+        background: black;
+        top: 375px;
+        left: 590px;
+        width: 90px;
+        height: 20px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      .hamburger-top {
+        position: absolute;
+        background: black;
+        top: 320px;
+        left: 590px;
+        width: 90px;
+        height: 20px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+      }
+      .meatball-1 {
+        position: absolute;
+        background: black;
+        top: 345px;
+        left: 585px;
+        width: 26px;
+        height: 26px;
+        border-radius: 20px;
+      }
+      .meatball-2 {
+        position: absolute;
+        background: black;
+        top: 345px;
+        left: 605px;
+        width: 26px;
+        height: 26px;
+        border-radius: 20px;
+      }
+      .meatball-3 {
+        position: absolute;
+        background: black;
+        top: 345px;
+        left: 622px;
+        width: 26px;
+        height: 26px;
+        border-radius: 20px;
+      }
+      .meatball-4 {
+        position: absolute;
+        background: black;
+        top: 345px;
+        left: 639px;
+        width: 26px;
+        height: 26px;
+        border-radius: 20px;
+      }
+      .meatball-5 {
+        position: absolute;
+        background: black;
+        top: 345px;
+        left: 656px;
+        width: 26px;
+        height: 26px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="meatball-5"></div>
+    <div class="meatball-4"></div>
+    <div class="meatball-3"></div>
+    <div class="meatball-2"></div>
+    <div class="meatball-1"></div>
+    <div class="hamburger-top"></div>
+    <div class="hamburger-bottom"></div>
+    <div class="glass-empty"></div>
+    <div class="straw-vertical"></div>
+    <div class="straw-horizontal"></div>
+    <div class="glass"></div>
+    <div class="plate"></div>
+  </body>
+</html>

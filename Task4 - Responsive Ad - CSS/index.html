@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Ad</title>
+    <style>
+      h1 {
+        color: white;
+        background: red;
+        width: 108%;
+        margin-top: -8px !important;
+        margin-left: -8px !important;
+        text-align: center;
+      }
+      body {
+        background-color: cornflowerblue;
+      }
+      div {
+        font-weight: bold;
+        color: white;
+      }
+      img {
+        padding: 5px;
+        margin: 0px;
+      }
+
+      .html {
+        background-color: blueviolet;
+      }
+      .css {
+        background-color: greenyellow;
+      }
+      .node {
+        background-color: white;
+      }
+      .mongo {
+        background-color: yellowgreen;
+      }
+      .react {
+        background-color: gray;
+      }
+      .javascript {
+        background-color: yellow;
+      }
+
+      @media screen and (max-width: 120px) {
+        body {
+          max-height: 600px;
+        }
+        body img {
+          width: 100px;
+          height: 100px;
+        }
+        h1 {
+          height: 50px;
+          width: 120px;
+          font-size: 15px;
+        }
+      }
+      @media screen and (min-width: 121px) {
+        body {
+          max-height: 400px;
+        }
+        body img {
+          width: 93px;
+          height: 93px;
+        }
+        h1 {
+          display: none;
+        }
+        div,
+        .cmg {
+          display: inline;
+          font-size: 15px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      @media screen and (min-width: 241px) {
+        body {
+          max-height: 600px;
+        }
+        body img {
+          width: 118px;
+          height: 118px;
+        }
+        h1 {
+          display: block;
+          height: 100px;
+        }
+        div,
+        .cmg {
+          display: inline;
+          font-size: 18px;
+          width: 60px;
+          height: 60px;
+        }
+      }
+      @media screen and (min-width: 301px) {
+        body {
+          max-height: 60px;
+        }
+        body img {
+          width: 45px;
+          height: 58px;
+        }
+        h1 {
+          display: inline-block;
+          font-size: 8px;
+          height: 58px;
+          width: 45px;
+        }
+        div,
+        .cmg {
+          display: inline-block;
+          font-size: 8px;
+          width: 45px;
+          height: 58px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FAMILIAR?</h1>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+      alt="HTML5 logo"
+      class="html"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png"
+      alt="CSS3 logo"
+      class="css"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png"
+      alt="NodeJS logo"
+      class="node"
+    />
+    <img
+      src="https://cdn.worldvectorlogo.com/logos/mongodb.svg"
+      alt="MongoDB logo"
+      class="mongo"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+      alt="React logo"
+      class="react"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
+      alt="JavaScript logo"
+      class="javascript"
+    />
+    <div>
+      JOIN OUR TEAM:
+      <img
+        src="https://www.convergent-usa.com/_nuxt/img/logo.d5d3c6a.png"
+        alt="CMG logo"
+        class="cmg"
+      />
+    </div>
+  </body>
+</html>
