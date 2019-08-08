@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                margin: 0 auto;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            img {
+                width: 70%;
+                height: 70%;
+                margin: auto;
+
+            }
+            .responsivebox {
+                margin: auto;
+                padding: 0;
+                position: relative;
+                top: 200px;
+                max-width: 360px;
+                height: 600px;
+                background-color: blue;
+            }
+            .fam {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background-color: red;
+                line-height: 75px;
+                font-size: 45px;
+                height: 75px;
+                color: white;
+                text-align: center;
+            }
+            #jointeam {
+                margin: 0;
+                width: 100%;
+                height: 75px;
+                clear: both;
+                color: white;
+                line-height: 75px;
+                font-size: 30px;
+                text-align: center;
+            }
+            #logo {
+                margin: 0;
+                padding: 0;
+                width: 50%;
+                height: 150px;
+                float: left;
+                display: flex;
+                justify-content: center;
+            }
+            #cmg {
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                top: 20px;
+                left: 35px;
+            }
+            @media only screen and (max-width: 600px) {
+                .responsivebox {
+                    max-width: 240px;
+                    height: 400px;
+                }
+                #logo {
+                    width: 50%;
+                    height: 120px;
+                }
+                #jointeam {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 20px;
+                    line-height: 35px;
+                }
+                #cmg {
+                    width: 20px;
+                    height: 20px;
+                    top: 10px;
+                    left: 25px;
+                }
+                .fam {
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 500px) {
+                .responsivebox {
+                    max-width: 468px;
+                    height: 60px;
+                }
+                .fam {
+                    width: 17%;
+                    height: 60px;
+                    font-size: 13px;
+                    line-height: 65px;
+                    float: left;
+                    display: block;
+                }
+                #logo {
+                    position: relative;
+                    height: 40px;
+                    width: 10%;
+                    top: 10px;
+                    left: 15px;    
+                }
+                #jointeam {
+                    width: 100%;
+                    height: 60px;
+                    font-size: 13px;
+                    line-height: 25px;
+                    text-align: center;   
+                }
+                #problem {
+                    float:right;
+                    width: 19%;
+                    height: 60px;
+                }
+                #cmg {
+                    top: 9px;
+                    left: 9px;
+                }
+            }
+            @media only screen and (max-width: 400px) {
+                .responsivebox {
+                    max-width: 120px;
+                    height: 600px;
+                }
+                .fam {
+                    width: 100%;
+                    font-size: 18px;
+                }
+                #logo {
+                    display: flex;
+                    justify-content: center;
+                    height: 75px;
+                    width: 70%;
+                    left: 18px;    
+                }
+                #problem {
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    width: 100%;
+                    height: 60px;
+                    top: 30px;
+                }
+                #cmg {
+                    width: 30px;
+                    height: 30px;
+                    left: 40px;
+                    top: 0px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <body>
+            <div class="responsivebox">
+                <h2 class="fam">FAMILIAR?</h2>
+            
+                <div id="logo" style="background-color: green">
+                    <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png" alt="CSS3-logo" >
+                </div>
+                <div id="logo"  style="background-color: purple">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="HTML5-logo">
+                </div>
+                <div id="logo" style="background-color: black">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="React-logo">
+                </div>
+                <div id="logo" style="background-color: darkgreen">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb.svg" alt="MongoDB-logo">
+                </div>
+                <div id="logo" style="background-color: rgb(240, 217, 79)">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png" alt="JavaScript-logo">
+                </div>
+                <div id="logo" style="background-color: white">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png" alt="NodeJS-logo">
+                </div>
+            
+                <div id="problem">
+                <h2 id="jointeam">JOIN OUR TEAM 
+                    <img id="cmg" src="https://www.convergent-usa.com/_nuxt/img/logo.d5d3c6a.png" alt="CMG-logo" style="color: white">
+                </h2>
+                </div>
+            </div>
+        </body>
+    </body>
+</html>
