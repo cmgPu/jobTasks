@@ -155,9 +155,18 @@ class App extends Component {
   handleHorizontalSlideEnd = async (e) => {
     e = e || window.event;
     e.preventDefault();
+    var X=e.clientX
+    if(X>=500)
+     {
+       X=500;
+     }
+     else if(X<=0)
+     {
+       X=0;
+     }
     await this.setState({
       positionAttributes: {
-        left: e.clientX,
+        left: X,
         top: this.state.positionAttributes.top
       }
     })
@@ -167,9 +176,18 @@ class App extends Component {
   handleVerticalSlideEnd = async (e) => {
     e = e || window.event;
     e.preventDefault();
+    var Y=e.clientY;
+    if(Y>=500)
+    {
+      Y=500;
+    }
+    else if(Y<=0)
+    {
+      Y=0;
+    }
     await this.setState({
       positionAttributes: {
-        top: e.clientY,
+        top: Y,
         left: this.state.positionAttributes.left
       }
     })
