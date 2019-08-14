@@ -44,6 +44,7 @@
         document.getElementById('fake-form').addEventListener('submit', function (e) {
             e.preventDefault();
             console.log('Yes you clicked');
+            writeResults();
         })
 
         var start = 0
@@ -52,13 +53,13 @@
         var now = 0
         var diff = 0
         var seconds = 0
-        var loop
-
+        var minute = 0
 
         //function will be executed when user press one of the keys while focus is on comment field
         //this event will be considered as start of typing and event listener will be removed when focus is out
 
         function setStart() {
+            document.getElementById("speed").innerHTML =""
             //clear textarea in case there are left of from previous input
             document.getElementById('comment').value = '';
             //remove onkeydown so it can not call for start on every keydown event
@@ -91,15 +92,14 @@
             diff = now - start;
             //because difference is in milisecond dividing it with 1000 will give result in seconds
             seconds = Math.floor(diff / 1000)
-            var minute = (seconds / 60).toFixed(2)
-            //calculate writing speed and pass it to function to write them out
-            writeResults((words / minute).toFixed(1), (chars / minute).toFixed(1))
+            minute = (seconds / 60).toFixed(2)
+
         }
-        function writeResults(resultWords, resultChars) {
+        function writeResults() {
             //save results after clear interval and focus out
-            if (resultChars != 0 && resultWords != 0) {
+            if (words != 0 && chars != 0) {
                 //write calculated results into given element
-                document.getElementById("speed").innerHTML = "<p>Average scores :" + resultWords + " words/min. and " + resultChars + " chars/min.</p>"
+                document.getElementById("speed").innerHTML = "<p>Average scores :" + (words / minute).toFixed(1) + " words/min. and " + (chars / minute).toFixed(1) + " chars/min.</p>"
             }
         }
     </script>
