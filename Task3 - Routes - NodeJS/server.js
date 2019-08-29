@@ -3,15 +3,34 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-app.use(express())
+var urls=["","/","/about-us"]
+app.use((req, res, next) => {
+ var path=req.path.trim()
+ var match
+  urls.forEach((url)=>{
+       if(path.match(url)&&path.length===url.length)
+       {
+           match=true
+       }
+       else if(path==="/")
+       {
+           match=true
+       }
+  })
+    if (("/favicon.ico"===(path))===false && match) {
+        logEvent(path)
+    }
+    else if(("/favicon.ico"===(path))===false && !match){
+        logEvent('/404') 
+    }
+    next()
+})
 //root route will return html text with name of route and will call function  to create new log entry for this route
 app.get('', (req, res, next) => {
     //setting response content type as html text
     res.set('Content-Type', 'text/html');
     //sending new buffer which will parse html from given string
     res.send(new Buffer.from('<h1>Root</h1>'));
-    //creating new log
-    logEvent('/')
     //end current response
     res.end()
 
@@ -23,8 +42,6 @@ app.get('/about-us', (req, res, next) => {
     res.set('Content-Type', 'text/html');
     //sending new buffer which will parse html from given string
     res.send(new Buffer.from('<h1>About us</h1>'));
-    //creating new log
-    logEvent('/about-us')
     //end current response
     res.end()
 
@@ -35,8 +52,6 @@ app.get('*', (req, res, next) => {
     res.set('Content-Type', 'text/html');
     //sending new buffer which will parse html from given string
     res.send(new Buffer.from('<h1>404-not found</h1>'));
-    //creating new log
-    logEvent('/404')
     //end current response
     res.end()
 
