@@ -54,7 +54,7 @@ Example below:
 Menu should consist of Users, Todos links, Search and Logout options as shown in the above examples.
 
 ## Definition of done
-* Working solution on your private repository
+* Working solution on your personal repository
 
 ## You will fail
 
