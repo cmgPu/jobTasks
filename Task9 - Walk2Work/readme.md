@@ -23,6 +23,7 @@ Use weather api to get hourly weather predictions.
     * Browser support
         * Chrome - just Chrome
 * Design
+    * Use ![File](./UI.png) as reference
     * Imagery
         * Background image ok/not-ok.png
     * UI
