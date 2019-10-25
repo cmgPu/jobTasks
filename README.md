@@ -14,7 +14,7 @@ Here you can find tasks that candidates usually solve for the purpose of coding 
 
 In development there is no one single solution, so, we will be looking into the approach you've taken.  
 Also, we will be looking into coding best practices, coding style, readability, etc... Make it clean and beautiful!  
-Please, do not just copy/paste from StackOverflow, add the source from where you took a chunk of code. There is no shame in doing this, but we would like to assess your coding skills, not copy/pasting skills.  
+Please, do not just copy/paste from StackOverflow, add the source from where you took a chunk/snippet of code. There is no shame in doing this, but we would like to assess your coding skills, not copy/pasting skills.  
 
 It doesn't matter how many tasks you solve, what matters is how you solve them!
 
