@@ -28,3 +28,4 @@ Please, do not just copy/paste from StackOverflow, add the source from where you
 * Task7 - TeamRanking - JS (Basic)
 * Task8 - AdimApp - react/API (Basic/Medium)
 * Task9 - Walk2Work - JS/API (Basic/Medium)
+* Task 10 - Language Encoder - (Medium)
