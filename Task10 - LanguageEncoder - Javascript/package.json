@@ -1,0 +1,14 @@
+{
+  "name": "lagnuage-encoder",
+  "version": "1.0.0",
+  "author": "Goran Zdjelar",
+  "description": "Javascript task #10",
+  "scripts": {
+    "start": "node app",
+    "test": "jest"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
