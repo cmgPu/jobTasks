@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drink-hamburger {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 300px;
+}
+
+/* drink styles  */
+.drink {
+  height: 170px;
+  position: relative;
+  width: 100px;
+}
+
+.drink:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transform: skewX(-5deg);
+  width: 10px;
+  background: black;
+}
+
+.drink:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  transform: skewX(3deg);
+  width: 10px;
+  background: black;
+}
+/* content of drink styles  */
+.content {
+  background-color: black;
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+.content:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: black;
+}
+
+.white {
+  background: white;
+  height: 50px;
+  position: relative;
+}
+
+.white:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: black;
+  border-right: 10px solid black;
+  border-left: 2px solid black;
+}
+
+.stray {
+  width: 15px;
+  height: 100px;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  transform: skewX(-20deg);
+}
+.stray div {
+  height: 10px;
+  width: 70px;
+  transform: skewY(-1deg);
+  position: absolute;
+  top: -0.2rem;
+  background: black;
+}
+
+/* Hamburger Styles  */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 140px;
+  width: 175px;
+}
+
+.hamburger div {
+  height: 40px;
+}
+
+.hamburger .first-layer,
+.third-layer {
+  background: black;
+}
+
+.first-layer {
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.second-layer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.second-layer div {
+  position: absolute;
+  width: 43px;
+  height: 40px;
+  background-color: black;
+  border-radius: 100px;
+}
+.third-layer {
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+/* Overlapping divs */
+.second-layer div:nth-child(2) {
+  left: 2rem;
+}
+.second-layer div:nth-child(3) {
+  left: 4rem;
+}
+.second-layer div:nth-child(4) {
+  left: 6rem;
+}
+
+.second-layer div:nth-child(5) {
+  left: 8rem;
+}
+
+/* 
+Tray Styles  */
+.tray {
+  width: 320px;
+  height: 30px;
+  background-color: black;
+  margin-top: 0.5rem;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
