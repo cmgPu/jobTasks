@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* GENERAL */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fffef1;
+        color: #531f61;
+        font-family: 'Lato', sans-serif;
+        display: grid;
+      }
+
+      /* HEADER */
+      header {
+        height: 200px;
+        padding: 2rem;
+        box-shadow: 0 1rem 4rem -3rem #000;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .logo img {
+        height: 3rem;
+      }
+
+      .logo h1 {
+        font-size: 1.2rem;
+        font-weight: 900;
+        margin: 10px 0;
+      }
+
+      .logo em {
+        font-size: 1rem;
+        font-weight: 300;
+        display: block;
+        margin-top: 20px;
+      }
+
+      .candidate {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 30px;
+      }
+
+      .candidate h4 {
+        font-size: 1rem;
+      }
+
+      .candidate em {
+        font-size: 0.9rem;
+        color: #024276;
+      }
+
+      .candidate img {
+        height: 4rem;
+        margin-top: 10px;
+      }
+
+      /* BANNER  */
+      .banner {
+        width: 468px;
+        height: 60px;
+        color: #fff;
+        background-color: #143c80;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* banner__FAMILIAR */
+      #familiar {
+        background-color: #ff0000;
+        color: #fff;
+        height: 100%;
+        padding: 10px;
+        align-items: center;
+        display: flex;
+        font-size: 0.7rem;
+      }
+
+      /* banner__TECHNOLOGIES */
+      .technologies {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        margin: 3px 5px 3px 14px;
+      }
+
+      .tech {
+        width: 3rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tech img {
+        max-width: 80%;
+        max-height: 60%;
+      }
+
+      #node {
+        background-color: #f1f1f1;
+      }
+
+      #mongodb {
+        background-color: #1d793a;
+      }
+
+      #react {
+        background-color: #313131;
+      }
+
+      #javascript {
+        background-color: #f0db4f;
+      }
+
+      #css3 {
+        background-color: #20a244;
+      }
+
+      #html5 {
+        background-color: #74419c;
+      }
+
+      /* banner__JOIN OUR TEAM */
+      #join-our-team {
+        background-color: #143c80;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        color: #fff;
+        height: 100%;
+        padding: 3px 5px;
+        display: flex;
+        font-size: 1rem;
+      }
+
+      #join-our-team img {
+        max-width: 38%;
+        max-height: 50%;
+      }
+
+      /* MEDIA QUERIES */
+      @media only screen and (max-width: 470px) {
+        header {
+          height: fit-content;
+          flex-direction: column;
+        }
+        .logo,
+        .candidate {
+          align-items: center;
+          text-align: center;
+        }
+        .banner {
+          width: 300px;
+          height: 600px;
+          display: grid;
+          grid-template-rows: auto 450px auto;
+          grid-template-columns: 300px;
+          place-items: center;
+        }
+        #familiar {
+          height: 80px;
+          font-size: 2.7rem;
+          width: 100%;
+          justify-content: center;
+        }
+        .technologies {
+          flex-direction: row;
+          flex-wrap: wrap;
+          height: 100%;
+          margin: 0;
+        }
+        .tech {
+          width: 150px;
+          height: 150px;
+        }
+        #join-our-team {
+          width: 100%;
+          height: 70px;
+          flex-direction: row;
+          font-size: 2.2rem;
+          align-items: center;
+        }
+        #join-our-team img {
+          max-width: 15%;
+          max-height: 40%;
+          margin-left: 10px;
+          margin-bottom: 5px;
+          align-self: flex-end;
+        }
+      }
+
+      @media only screen and (max-width: 350px) {
+        .banner {
+          width: 240px;
+          height: 400px;
+          display: grid;
+          grid-template-rows: 360px auto;
+          grid-template-columns: 240px;
+          place-items: center;
+        }
+        #familiar {
+          display: none;
+        }
+        .technologies {
+          flex-direction: row;
+          flex-wrap: wrap;
+          height: 100%;
+          margin: 0;
+        }
+        .tech {
+          width: 120px;
+          height: 120px;
+        }
+        #join-our-team {
+          width: 100%;
+          height: 50px;
+          flex-direction: row;
+          font-size: 1.5rem;
+          align-items: center;
+        }
+        #join-our-team img {
+          max-width: 15%;
+          margin-left: 15px;
+          margin-bottom: 0;
+          align-self: center;
+        }
+      }
+
+      @media only screen and (max-width: 300px) {
+        .banner {
+          width: 120px;
+          height: 600px;
+          display: grid;
+          grid-template-rows: auto 490px auto;
+          grid-template-columns: 120px;
+          place-items: center;
+        }
+        #familiar {
+          height: 50px;
+          font-size: 1.2rem;
+          width: 100%;
+          justify-content: center;
+          display: flex;
+        }
+        .technologies {
+          flex-direction: row;
+          flex-wrap: wrap;
+          height: 100%;
+          margin: 0;
+          padding: 20px;
+        }
+        .tech {
+          width: 77px;
+          height: 77px;
+        }
+        #join-our-team {
+          width: 100%;
+          height: 60px;
+          flex-direction: column;
+          font-size: 1rem;
+          align-items: center;
+        }
+        #join-our-team img {
+          max-width: 36%;
+
+          margin-bottom: 0;
+          align-self: flex-end;
+          margin: 5px;
+        }
+      }
+    </style>
+
+    <title>Task4 - Responsive Banner</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="https://www.convergent-usa.com/_nuxt/img/logo.d5d3c6a.png"
+          alt="Convergent Media Group logo"
+        />
+        <em>Candidate tasks for Web Dev position</em>
+        <h1>Task No.4 - Responsive Banner</h1>
+      </div>
+      <div class="candidate">
+        <h4>Job Candidate</h4>
+        <em>Hany Afifi</em>
+        <img
+          src="https://www.hanyafifi.me/projects/cmg/candidate-hany.png"
+          alt="Candidate Hany Afifi picture"
+        />
+      </div>
+    </header>
+    <div class="banner">
+      <div id="familiar">
+        <h4>FAMILIAR?</h4>
+      </div>
+
+      <div class="technologies">
+        <div class="tech" id="html5">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+            alt=""
+          />
+        </div>
+        <div class="tech" id="css3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+            alt=""
+          />
+        </div>
+        <div class="tech" id="javascript">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+            alt=""
+          />
+        </div>
+
+        <div class="tech" id="react">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+            alt=""
+          />
+        </div>
+        <div class="tech" id="mongodb">
+          <img
+            src="https://www.hanyafifi.me/projects/cmg/mongodb-white-logo.png"
+            alt=""
+          />
+        </div>
+        <div class="tech" id="node">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div id="join-our-team">
+        <h5>JOIN OUR TEAM</h5>
+
+        <img
+          src="https://www.hanyafifi.me/projects/cmg/cmg-white-logo.png"
+          alt="Convergent Media Group logo White variante"
+        />
+      </div>
+    </div>
+  </body>
+</html>
